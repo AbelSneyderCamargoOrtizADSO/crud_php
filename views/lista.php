@@ -38,10 +38,10 @@ $usuarios = $ob->getAll();
             <td><?=$usuarios[$i]["carrera"]?></td>
             <td>
                 <a href="editar.php?id=<?=$usuarios[$i]["id"]?>">Editar</a>
-                <form action="">
-                    
+                <form action="../controllers/eliminar.php" method="post">
+                    <input type="hidden" name="id" value="<?=$usuarios[$i]["id"]?>">
+                    <button>Eliminar</button>
                 </form>
-                <a href="">Eliminar</a>
             </td>
         </tr>
         <?php

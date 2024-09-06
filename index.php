@@ -49,6 +49,15 @@
 
 </html>
 
+<?php
+$path = dirname($_SERVER['SCRIPT_NAME']);
+$url = $_SERVER['REQUEST_URI'];
+
+$b = substr($url, strlen($path));
+
+echo $url, $path, $b;
+
+?>
 
 <?php
 require_once("services/Mail.php");
